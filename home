@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contente="width=device-width, initial-cale=1.0">
+    <link rel="icon" href="Imagenes/favicon-removebg-preview.ico">
+    <title> CeramicArt </title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+    <br>
+    <br>
+   <nav style="text-align: right;">
+    <a href="home.html">HOME</a>
+    <a href="about.html">NOSOTROS</a>
+    <a href="productos.html">PRODUCTOS</a>
+    <a href="contactos.html">CONTACTO</a>
+   </nav> 
+   <br>
+   <br>
+    <h1 style="text-align: center;">CERAMIC</h1>
+    <h3 style="text-align: center;"> Art </h3>
+</header>
+<main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;"><b>EL REGALO IDEAL</b></h1>
+    <br>
+    <div id="carrusel">
+        <a href="#" class="left-arrow"><img src="images/flecha_izquierda" /></a>
+        <a href="#" class="right-arrow"><img src="images/flecha_derecha" /></a>
+        <div class="carrusel">
+            <div class="product" id="product_0">
+                    <img src="imagenes/producto1jpg" width="100%">
+                </div>
+                <div class="product" id="product_1">
+                    <img src="imagenes/producto2.jpg" width="100%">
+                </div>
+                <div class="product" id="producto_2">
+                    <img src="imagenes/producto3" width="100%">
+                </div>
+                <div class="product" id="producto_3">
+                    <img src="imagenes/producto4.jpg" width="100%">
+                </div>
+                <div class="product" id="producto_4">
+                    <img src="imagenes/producto5.jpg" width="100%">
+                </div>
+                <div class="product" id="producto_5">
+                    <img src="imagenes/producto6.jpg" width="100%">
+                </div>
+                </div>
+</div>
+</div>
+//corregir carrusel
+<div>
+    <h1 style="text-align: center;">PRODUCTOS</h1>
+    // GRILLA
+
+</div>
+</main>
+<footer>
+    <br>
+    <br>
+   <nav style="text-align: center;">
+    <a href="home.html">HOME</a>
+    <a href="about.html">NOSOTROS</a>
+    <a href="productos.html">PRODUCTOS</a>
+    <a href="contactos.html">CONTACTO</a>
+   </nav> 
+   <br>
+   <br>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    var current = 0;
+    var imagenes = new Array();
+     
+    $(document).ready(function() {
+        var numImages = 6;
+        if (numImages <= 3) {
+            $('.right-arrow').css('display', 'none');
+            $('.left-arrow').css('display', 'none');
+        }
+     
+        $('.left-arrow').on('click',function() {
+            if (current > 0) {
+                current = current - 1;
+            } else {
+                current = numImages - 3;
+            }
+     
+            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+     
+            return false;
+        });
+     
+        $('.left-arrow').on('hover', function() {
+            $(this).css('opacity','0.5');
+        }, function() {
+            $(this).css('opacity','1');
+        });
+     
+        $('.right-arrow').on('hover', function() {
+            $(this).css('opacity','0.5');
+        }, function() {
+            $(this).css('opacity','1');
+        });
+     
+        $('.right-arrow').on('click', function() {
+            if (numImages > current + 3) {
+                current = current+1;
+            } else {
+                current = 0;
+            }
+     
+            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+     
+            return false;
+        }); 
+     });
+    </script>
+</body>
