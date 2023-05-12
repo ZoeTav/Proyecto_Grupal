@@ -17,10 +17,20 @@
             e.preventDefault();
         }
     }
+
+    const validarCalidad = function(e){
+        if(formulario.uno.checked == true || formulario.dos.checked == true || formulario.tres.checked == true || formulario.cuatro.checked == true || formulario.cinco.checked == true){
+        } else {
+            alert("Califique la calidad de nuestros productos, por favor.")
+            e.preventDefault();
+        }
+
+    }
     
     const validar = function(e){
         validarNombre(e);
         validarRadio(e);
+        validarCalidad(e);
     }
 
     formulario.addEventListener("submit",validar);
