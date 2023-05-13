@@ -7,53 +7,86 @@ background-color: #145374;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body {
-    margin-left: 50pt; margin-right: 50pt;
     background-color: #5588A3;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#carrusel {
-    float:center;
+/*Estilos Section*/
+section{
+    display: flex;
+    width: 100%;
+    height: 430px;
+}
+section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+ 
+/*Estilos de la galería*/
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 400px;
+    padding: 20px;
+}
+.gallery__item{
+    position: relative;
+}
+.gallery__img{
     width:100%;
-    overflow:hidden;
-    height: 203px;
-    position:relative;
-    margin-top:20px;
-    margin-bottom:20px;
-    border: 1px solid #145374;
+    height: 100%;
+    object-fit: cover;
 }
- 
-#carrusel .left-arrow {
-    position:absolute;
-    left:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
+.gallery__item:nth-child(1) {
+    grid-row-start: span 2;
 }
- 
-#carrusel .right-arrow {
-    position:absolute;
-    right:10px;
-    z-index:1;
-    top:50%;
-    margin-top:-9px;
+.gallery__item:nth-child(3) {
+    grid-row-start: span 2;
 }
 
-.carrusel {
-    width:4000px;
-    left:0px;
-    position:absolute;
-    z-index:0;
+@media (min-width:768px){
+    .gallery-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery__item:nth-child(1){
+        grid-row-start: span 1;
+    }
+    .gallery__item:nth-child(2){
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(3){
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(5){
+        grid-column-start: span 2;
+    }
 }
- 
-.carrusel>div {
-    float: left;
-    height: 203px;
-    margin-right: 5px;
-    width: 195px;
-    text-align:center;
+
+@media (min-width:1024px){
+    .gallery-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+        .gallery__item:nth-child(1){
+        grid-row-start: span 1;
+    }
+    .gallery__item:nth-child(2){
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(3){
+        grid-row-start: span 1;
+    }
+    .gallery__item:nth-child(5){
+        grid-column-start: span 1;
+    }
 }
- 
-.carrusel img {
-    cursor:pointer;
-}
+
  
