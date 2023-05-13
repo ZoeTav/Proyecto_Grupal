@@ -8,28 +8,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    
-    //Formulario con HTML y validado en JS - queda organizar en donde colocarlo //falta invocarlo desde formulario.js
-    <form action="" name="formulario" method="get">
-        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
-        <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido: ">
-        <br>
-
-        <input type="radio" name="sexo" id="hombre" value="hombre" required> Hombre
-        <input type="radio" name="sexo" id="mujer" value="mujer" required> Mujer
-        <input type="radio" name="sexo" id="otro" value="otro" required> Otro
-        <br>
-
-        <input type="radio" name="uno" id="uno" value="uno" required>1
-        <input type="radio" name="dos" id="dos" value="dos" required>2
-        <input type="radio" name="tres" id="tres" value="tres" required>3
-        <input type="radio" name="cuatro" id="cuatro" value="cuatro" required>4
-        <input type="radio" name="cinco" id="cinco" value="cinco" required>5
-        <br>
-
-        <input type="submit" id="btn" name="btn" value="Enviar">
-
-    </form>
+  
 <header>
     <br>
     <br>
@@ -50,38 +29,64 @@
     <br>
     <br>
     <h1 style="text-align: center;"><b>EL REGALO IDEAL</b></h1>
-    <br>
-    <div id="carrusel">
-        <a href="#" class="left-arrow"><img src="images/flecha_izquierda" /></a>
-        <a href="#" class="right-arrow"><img src="images/flecha_derecha" /></a>
-        <div class="carrusel">
-            <div class="product" id="product_0">
-                    <img src="imagenes/producto1jpg" width="100%">
-                </div>
-                <div class="product" id="product_1">
-                    <img src="imagenes/producto2.jpg" width="100%">
-                </div>
-                <div class="product" id="producto_2">
-                    <img src="imagenes/producto3" width="100%">
-                </div>
-                <div class="product" id="producto_3">
-                    <img src="imagenes/producto4.jpg" width="100%">
-                </div>
-                <div class="product" id="producto_4">
-                    <img src="imagenes/producto5.jpg" width="100%">
-                </div>
-                <div class="product" id="producto_5">
-                    <img src="imagenes/producto6.jpg" width="100%">
-                </div>
-                </div>
-</div>
-</div>
-//corregir carrusel
+    <section>
+    <img src="imagenes/Apéro time.jpg" alt="Producto_home">
+    <img src="imagenes/Breakfast.jpg" alt="Producto_home">
+    <img src="imagenes/Colander in use.jpg" alt="Producto_home">
+    <img src="imagenes/Cooking.jpg" alt="Producto_home">
+    <img src="imagenes/Fruit Bowl.jpg" alt="Producto_home">
+    <img src="imagenes/Milk Pourer.jpg" alt="Producto_home">
+    <img src="imagenes/Oil & Vinegar set.jpg" alt="Producto_home">
+    <img src="imagenes/Volcano vase (2).jpg" alt="Producto_home">
+    </section>
+
 <div>
     <h1 style="text-align: center;">PRODUCTOS</h1>
-    // GRILLA
+<div class="gallery-container">
+    <div class="gallery__item">
+        <img src="imagenes/Espresso Sets.jpg" alt="Producto" class="gallery__img">
+        <h3 class="gallery__title">Producto 1</h3>           
+    </div>
+    <div class="gallery__item">
+        <img src="imagenes/Hooks Collection.jpg" alt="Producto" class="gallery__img">
+        <h3 class="gallery__title">Producto 2</h3>
+    </div>
+    <div class="gallery__item">
+        <img src="imagenes/Super Ceramics (13).jpg" alt="Producto" class="gallery__img">
+        <h3 class="gallery__title">Producto 3</h3>
+    </div>
+    <div class="gallery__item">
+        <img src="imagenes/Super Ceramics (7).jpg" alt="Producto" class="gallery__img">
+        <h3 class="gallery__title">Producto 4</h3>
+    </div>
+    <div class="gallery__item">
+        <img src="imagenes/Mugs in 3 Finishes.jpg" alt="Producto" class="gallery__img">
+        <h3 class="gallery__title">Producto 5</h3>
+    </div>
+ </div>  
+    </div>
+    
+    /*Formulario con HTML y validado en JS - queda organizar en donde colocarlo //falta invocarlo desde formulario.js*/
+    <form action="" name="formulario" method="get">
+        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
+        <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido: ">
+        <br>
 
-</div>
+        <input type="radio" name="sexo" id="hombre" value="hombre" required> Hombre
+        <input type="radio" name="sexo" id="mujer" value="mujer" required> Mujer
+        <input type="radio" name="sexo" id="otro" value="otro" required> Otro
+        <br>
+
+        <input type="radio" name="uno" id="uno" value="uno" required>1
+        <input type="radio" name="dos" id="dos" value="dos" required>2
+        <input type="radio" name="tres" id="tres" value="tres" required>3
+        <input type="radio" name="cuatro" id="cuatro" value="cuatro" required>4
+        <input type="radio" name="cinco" id="cinco" value="cinco" required>5
+        <br>
+
+        <input type="submit" id="btn" name="btn" value="Enviar">
+
+    </form>
 </main>
 <footer>
     <br>
@@ -95,53 +100,4 @@
    <br>
    <br>
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script>
-    var current = 0;
-    var imagenes = new Array();
-     
-    $(document).ready(function() {
-        var numImages = 6;
-        if (numImages <= 3) {
-            $('.right-arrow').css('display', 'none');
-            $('.left-arrow').css('display', 'none');
-        }
-     
-        $('.left-arrow').on('click',function() {
-            if (current > 0) {
-                current = current - 1;
-            } else {
-                current = numImages - 3;
-            }
-     
-            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
-     
-            return false;
-        });
-     
-        $('.left-arrow').on('hover', function() {
-            $(this).css('opacity','0.5');
-        }, function() {
-            $(this).css('opacity','1');
-        });
-     
-        $('.right-arrow').on('hover', function() {
-            $(this).css('opacity','0.5');
-        }, function() {
-            $(this).css('opacity','1');
-        });
-     
-        $('.right-arrow').on('click', function() {
-            if (numImages > current + 3) {
-                current = current+1;
-            } else {
-                current = 0;
-            }
-     
-            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
-     
-            return false;
-        }); 
-     });
-    </script>
 </body>
