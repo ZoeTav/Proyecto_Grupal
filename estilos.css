@@ -240,11 +240,3 @@ section img:hover{
         grid-column-start: span 1;
     }
 }
-
-/*Estilos Form*/
-.form-container{
-    display: grid;
-}
-
-
-  
