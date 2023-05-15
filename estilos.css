@@ -1,15 +1,167 @@
-* {
-margin: 0;
-background-color: #E8E8E8;
+body {
+    margin: 0;
+    background: #E8E8E8;
+}
+body h1{
+    font-family: 'IBM Plex Mono', monospace;
+    color: #5588A3;
 }
 header {
-background-color: #145374;    
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    background: #145374;    
 }
-body {
-    background-color: #5588A3;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.logo-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 200px;
+    padding: 0;
 }
+.CeramicArt{
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5em;
+    width: 100%;
+    color: #145374;
+    object-fit: cover;
+}
+.logo-container{
+    animation:fadeIn 10s ease;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+.subtitulos:hover{
+    animation:animate__pulse 1s ease;
+}
+@keyframes animate__pulse{
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+footer{
+    width: 100%;
+    background: #145374;
+}
+
+/*Estilos Menu*/
+
+#btn-menu {
+    display: none;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #e8e8e834;
+}
+header label:hover{ 
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu li{
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    flex-grow: 1 ;
+    border-right: 1px solid #e8e8e834;
+}
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #E8E8E8;
+    text-decoration: none;
+}
+.container-submenu{
+    position: relative;
+}
+.submenu{
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    background: #5588A3;
+    top: 50px;
+    width: 100%;
+    overflow: visible;
+    z-index:1000;
+    opacity:0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.container-submenu:hover .submenu{
+    opacity: 1;
+    visibility: visible;
+}
+
+@media(max-width:768px){
+    header label{
+        display:block;
+    }
+    .menu{
+        position: absolute;
+        background: #145374;
+        width: 50%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li{
+        border: 1px solid #e8e8e834;
+    }
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+    .container-submenu{
+        position: relative;
+    }
+    .submenu{
+        position:absolute;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        transition: all 0.5s;
+    }
+    .submenu .menu__item{
+        text-align: center;
+        background:#5588A3 ;
+        padding-left: 0;
+    }
+}
+
+/*Estilos Menu-out*/
+
+.menu-out ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu-out li:hover{
+        background: #145374;
+}
+.menu-out li a{
+    font-family: 'IBM Plex Mono', monospace;
+    display: block;
+    padding: 15px 20px;
+    color: #E8E8E8;
+    text-decoration: none;
+}
+
 /*Estilos Section*/
 section{
     display: flex;
@@ -89,4 +241,10 @@ section img:hover{
     }
 }
 
- 
+/*Estilos Form*/
+.form-container{
+    display: grid;
+}
+
+
+  
