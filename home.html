@@ -6,30 +6,37 @@
     <link rel="icon" href="Imagenes/favicon-removebg-preview.ico">
     <title> CeramicArt </title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-  
 <header>
-    <br>
-    <br>
-   <nav style="text-align: right;">
-    <a href="home.html">HOME</a>
-    <a href="about.html">NOSOTROS</a>
-    <a href="productos.html">PRODUCTOS</a>
-    <a href="contactos.html">CONTACTO</a>
-   </nav> 
-   <br>
-   <br>
-    <h1 style="text-align: center;">CERAMIC</h1>
-    <h3 style="text-align: center;"> Art </h3>
+    <input type="checkbox" id="btn-menu">
+    <label for="btn-menu"><img src="imagenes/icons8-menú-30.png" alt="menu"></label>
+    <nav class="menu">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">NOSOTROS</a></li>
+            <li class="container-submenu">
+                <a href="#" class="submenu-btn">PRODUCTOS</a>
+                <ul class="submenu">
+                    <li class="menu__item"><a href="productos1.html">PERCHEROS</a></li>
+                    <li class="menu__item"><a href="productos2.html">TAZAS</a></li>
+                    <li class="menu__item"><a href="productos3.html">CONTENEDORES</a></li>
+                    <li class="menu__item"><a href="productos4.html">SETS</a></li>
+                </ul>
+            <li><a href="contactos.html">CONTACTOS</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 style="text-align: center;"><b>EL REGALO IDEAL</b></h1>
-    <section>
+    <div class="logo-container">
+        <p class="CeramicArt">CeramicArt</p>
+    </div>
+    
+    <h1 class="subtitulos" style="text-align: center;"><b>#ElRegaloIdeal</b></h1>
+   <section>
     <img src="imagenes/Apéro time.jpg" alt="Producto_home">
     <img src="imagenes/Breakfast.jpg" alt="Producto_home">
     <img src="imagenes/Colander in use.jpg" alt="Producto_home">
@@ -38,11 +45,14 @@
     <img src="imagenes/Milk Pourer.jpg" alt="Producto_home">
     <img src="imagenes/Oil & Vinegar set.jpg" alt="Producto_home">
     <img src="imagenes/Volcano vase (2).jpg" alt="Producto_home">
-    </section>
+    <img src="imagenes/LINES BOX.jpg" alt="Producto_home">
+    <img src="imagenes/Small Snack in a Small Bowl.jpg" alt="Producto_home">
+</section>
 
 <div>
-    <h1 style="text-align: center;">PRODUCTOS</h1>
-<div class="gallery-container">
+    <br>
+    <h1 class="subtitulos" style="text-align: center;">PRODUCTOS</h1>
+ <div class="gallery-container">
     <div class="gallery__item">
         <img src="imagenes/Espresso Sets.jpg" alt="Producto" class="gallery__img">         
     </div>
@@ -59,40 +69,43 @@
         <img src="imagenes/Mugs in 3 Finishes.jpg" alt="Producto" class="gallery__img">
     </div>
  </div>  
-    </div>
-    
-    /*Formulario con HTML y validado en JS - queda organizar en donde colocarlo //falta invocarlo desde formulario.js*/
+</div>
+//Formulario con HTML y validado en JS - queda organizar en donde colocarlo //falta invocarlo desde formulario.js
+<div class="form-container">
     <form action="" name="formulario" method="get">
-        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
-        <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido: ">
-        <br>
+    <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
+    <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido: ">
+    <br>
 
-        <input type="radio" name="sexo" id="hombre" value="hombre" required> Hombre
-        <input type="radio" name="sexo" id="mujer" value="mujer" required> Mujer
-        <input type="radio" name="sexo" id="otro" value="otro" required> Otro
-        <br>
+    <input type="radio" name="sexo" id="hombre" value="hombre" required> Hombre
+    <input type="radio" name="sexo" id="mujer" value="mujer" required> Mujer
+    <input type="radio" name="sexo" id="otro" value="otro" required> Otro
+    <br>
 
-        <input type="radio" name="uno" id="uno" value="uno" required>1
-        <input type="radio" name="dos" id="dos" value="dos" required>2
-        <input type="radio" name="tres" id="tres" value="tres" required>3
-        <input type="radio" name="cuatro" id="cuatro" value="cuatro" required>4
-        <input type="radio" name="cinco" id="cinco" value="cinco" required>5
-        <br>
+    <input type="radio" name="uno" id="uno" value="uno" required>1
+    <input type="radio" name="dos" id="dos" value="dos" required>2
+    <input type="radio" name="tres" id="tres" value="tres" required>3
+    <input type="radio" name="cuatro" id="cuatro" value="cuatro" required>4
+    <input type="radio" name="cinco" id="cinco" value="cinco" required>5
+    <br>
 
-        <input type="submit" id="btn" name="btn" value="Enviar">
-
-    </form>
+    <input type="submit" id="btn" name="btn" value="Enviar">
+</form>
+</div>
 </main>
 <footer>
     <br>
     <br>
-   <nav style="text-align: center;">
-    <a href="home.html">HOME</a>
-    <a href="about.html">NOSOTROS</a>
-    <a href="productos.html">PRODUCTOS</a>
-    <a href="contactos.html">CONTACTO</a>
-   </nav> 
+   <nav class="menu-out">
+    <ul>
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="about.html">NOSOTROS</a></li>
+    <li><a href="productos.html">PRODUCTOS</a></li>
+    <li><a href="contactos.html">CONTACTO</a></li>
+    </ul>
+   </nav>
    <br>
    <br>
 </footer>
+
 </body>
