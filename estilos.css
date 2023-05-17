@@ -25,7 +25,7 @@ header {
     object-fit: cover;
 }
 .logo-container{
-    animation:fadeIn 10s ease;
+    animation:fadeIn 10s normal;
 }
 @keyframes fadeIn {
     0% {opacity: 0;}
@@ -238,5 +238,251 @@ section img:hover{
     }
     .gallery__item:nth-child(5){
         grid-column-start: span 1;
+    }
+}
+
+/*Estilos Form*/
+.form-container{
+    display: grid;
+}
+
+/*Estilos About*/
+.gallery-container-about{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+    grid-auto-rows: 300px;
+}
+.gallery__item_about{
+    position: relative;
+}
+.gallery__img_about{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__text{
+    position: relative;
+}
+.gallery__item_about:nth-child(1) {
+    grid-row-start: span 1;
+}
+.gallery__item_about:nth-child(2) {
+    grid-row-start: span 1;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: justify;
+    padding: 10px;
+}
+.gallery__item_about:nth-child(3) {
+    grid-row-start: span 2;
+}
+.gallery__item_about:nth-child(4) {
+    grid-row-start: span 1;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: justify;
+    padding: 55px 10px 55px 10px;
+}
+.gallery__item_about:nth-child(5) {
+    grid-row-start: span 2;
+}
+.gallery__item_about:nth-child(6) {
+    grid-row-start: span 2;
+}
+.gallery__item_about:nth-child(7) {
+    grid-row-start: span 2;
+}
+.gallery__item_about:nth-child(8) {
+    grid-row-start: span 2;
+}
+.gallery__item_about:nth-child(9) {
+    grid-row-start: span 2;
+}
+
+@media (min-width:768px){
+    .gallery-container-about{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery__item_about:nth-child(1) {
+        grid-column-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(2) {
+        font-family: 'IBM Plex Mono', monospace;
+        text-align: justify;
+        padding:10px 15px 15px 0px;
+    }
+    .gallery__item_about:nth-child(3) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(4) {
+        grid-row-start: span 1;
+        font-family: 'IBM Plex Mono', monospace;
+        text-align: justify;
+        padding: 20px 15px 15px 0px;
+    }
+    .gallery__item_about:nth-child(5) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(6) {
+        grid-row-start: span 1;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(7) {
+        grid-row-start: span 1;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(8) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(9) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+}
+
+@media (min-width:1024px){
+    .gallery-container-about{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery__item_about:nth-child(1) {
+        grid-column-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(2) {
+        font-family: 'IBM Plex Mono', monospace;
+        text-align: justify;
+        padding: 30px;
+    }
+    .gallery__item_about:nth-child(3) {
+        grid-row-start: span 3;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(4) {
+        grid-row-start: span 1;
+        font-family: 'IBM Plex Mono', monospace;
+        text-align: justify;
+        padding: 70px 30px;
+    }
+    .gallery__item_about:nth-child(5) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(6) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(7) {
+        grid-row-start: span 3;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(8) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+    .gallery__item_about:nth-child(9) {
+        grid-row-start: span 2;
+        padding: 2px;
+    }
+}
+  
+/*Estilos Contactos*/
+.contactos{
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: justify;
+    padding: 25px 180px;
+}
+@media (max-width:768px){
+   .contactos{
+    padding: 20px 100px;
+   }
+}
+@media (max-width:520px){
+    .contactos{
+        padding: 15px 50px;
+    }
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px;
+    background: #E8E8E8;
+    align-content: center;
+}
+.form__item{
+    position: relative;
+    margin-top: 10px;
+}
+
+/*Estilos Productos*/
+.container-icon{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:right;
+}
+.icono{
+    width: 40px;
+    padding: 0 30px 0 0 ;
+}
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    font-family:'IBM Plex Mono', monospace;
+    margin: 0 5px 20px;
+}
+.producto__item img{
+    width: 110%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 1.5s;
+}
+.producto__item{
+    border-radius: 10px;
+}
+.producto__item:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.40);
+}
+.producto__item figure{
+    overflow: hidden;
+}
+.producto__item:hover img{
+    transform: scale(1.2)
+}
+.producto__info{
+    padding: 0 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.price{
+    font-size: 20px;
+}
+.producto__info button{
+    border: none;
+    background: none;
+    background-color: #145374;
+    color:#E8E8E8 ;
+    font-family:'IBM Plex Mono', monospace ;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.20) ;
+}
+@media(max-width:768px){
+    .container-products{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:510px){
+    .container-products{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
