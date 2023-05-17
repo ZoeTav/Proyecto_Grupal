@@ -70,29 +70,31 @@
     </div>
  </div>  
 </div>
-//Formulario con HTML y validado en JS - queda organizar en donde colocarlo //falta invocarlo desde formulario.js
+
 <div class="form-container">
-    <form action="" name="formulario" method="get">
+    <form action="mailto:example@gmail.com" name="formulario" method="get">
     <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
     <input type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido: ">
     <br>
 
-    <input type="radio" name="sexo" id="hombre" value="hombre" required> Hombre
-    <input type="radio" name="sexo" id="mujer" value="mujer" required> Mujer
-    <input type="radio" name="sexo" id="otro" value="otro" required> Otro
+    <input type="radio" name="sexo" id="hombre" value="hombre" > Hombre
+    <input type="radio" name="sexo" id="mujer" value="mujer" > Mujer
+    <input type="radio" name="sexo" id="otro" value="otro" > Otro
     <br>
 
-    <input type="radio" name="uno" id="uno" value="uno" required>1
-    <input type="radio" name="dos" id="dos" value="dos" required>2
-    <input type="radio" name="tres" id="tres" value="tres" required>3
-    <input type="radio" name="cuatro" id="cuatro" value="cuatro" required>4
-    <input type="radio" name="cinco" id="cinco" value="cinco" required>5
+    <input type="radio" name="calificacion" id="calificacion" value="uno" >1
+    <input type="radio" name="calificacion" id="calificacion" value="dos" >2
+    <input type="radio" name="calificacion" id="calificacion" value="tres" >3
+    <input type="radio" name="calificacion" id="calificacion" value="cuatro" >4
+    <input type="radio" name="calificacion" id="calificacion" value="cinco" >5
     <br>
 
     <input type="submit" id="btn" name="btn" value="Enviar">
 </form>
 </div>
+
 </main>
+
 <footer>
     <br>
     <br>
@@ -109,3 +111,8 @@
 </footer>
 
 </body>
+
+<!--Scripts-->
+
+<script src="./assets/script.js"></script>
+</html>
