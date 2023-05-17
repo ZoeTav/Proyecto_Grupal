@@ -38,17 +38,26 @@
         <p class="contactos"> Si tiene alguna pregunta, utilice los campos a continuación para ponerse en contacto conmigo. Te responderé tan pronto como mis manos estén limpias de cualquier arcilla.
             <br>
             Detrás de todos los aspectos de esta pequeña empresa, solo hay un ser humano: yo, Charlotte, así que si no obtiene una respuesta en los próximos 7 días, comuníquese conmigo nuevamente. Podría estar en modo de producción completa en mi Atelier, afuera disfrutando de la naturaleza o pasando tiempo de calidad con mi familia y amigos. En todos los casos, significa que estoy lejos de mi computadora y mi buzón, así que sé indulgente y llámame de nuevo. :)</p>
-            <div class="form-container">
-        <from action="mailto:example@gmail.com" method="post" enctype="text/plain">
-            <input class="form__item" type="text" name="Nombre" maxlength="50">
-            <input class="form__item" type="text" name="Correo@">
-            <input class="form__item" type="text" name="Numero de telefono">
-            <textarea class="form__item" name="Comentario" rows="10" cols="50">Escribe tu comentario...</textarea>
-            <input class="form__item" type="submit" value="Enviar">
-            <input class="form__item" type="reset" value="Borrar">
-        </from>
-        //Corregir estilos de formulario
-            </div>
+        <div class="form-container">
+            <form action="mailto:example@gmail.com" name="contactosfor" method="get">
+            <input class="form__item" type="text" id=nombre name="nombre" maxlength="50" placeholder="Nombre">
+            <br>
+
+            <input class="form__item" type="text" id=correo name="correo" placeholder="Correo@">
+            <br>
+
+            <input class="form__item" type="text" id=numeroTel name="numeroTel" placeholder="Telefono">
+            <br>
+
+            <textarea class="form__item" id="comentario" name="comentario" rows="10" cols="50" placeholder="Escribe tu comentario..."></textarea>
+            <br>
+
+            <input class="form__item" type="submit" id="btn_enviar" name="btn" value="Enviar">
+
+            <!--<input class="form__item" type="reset" id="btn_borrar" name="btn_borrar" value="Borrar">-->
+            </form>
+
+        </div>
     </main>
     <footer>
         <br>
@@ -64,4 +73,58 @@
        <br>
        <br>
     </footer>
+
+    <script>
+        (function(){
+
+            //variables
+            
+            const contactosfor = document.getElementsByName("contactosfor")[0];
+                  elementos = contactosfor.elements,
+                  boton = document.getElementById("btn_enviar"),
+            
+            
+            const validarNombre = function(e){
+                if(contactosfor.nombre.value == 0) {
+                    alert("Completa el campo nombre.");
+                    e.preventDefault();
+                }
+            };
+
+            const validarCorreo = function(e){
+                if(contactosfor.correo.value == 0) {
+                    alert("Completa el campo Correo.");
+                    e.preventDefault();
+                }
+            };
+
+            const validarTelefono = function(e){
+                if(contactosfor.numeroTel.value == 0) {
+                    alert("Completa el campo de número de teléfono.");
+                    e.preventDefault();
+                }
+            };
+            
+            const validarTextarea = function(e){
+                if(contactosfor.comentario.value == 0) {
+                    alert("Agregue un comentario, será de nuestro agrado leerle.");
+                    e.preventDefault();
+                }
+            };
+
+            //Funcion que valida más funciones
+            const validar = function(e){
+                  validarNombre(e);
+                  validarCorreo(e);
+                  validarTelefono(e);
+                  validarTextarea(e);
+            };
+
+            //funcion validar para ejecutar
+
+            contactosfor.addEventListener("submit",validar);
+        })
+    </script>
 </body>
+</html>
+
