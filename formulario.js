@@ -19,7 +19,7 @@
     }
 
     const validarCalidad = function(e){
-        if(formulario.uno. == true || formulario.dos. == true || formulario.tres. == true || formulario.cuatro. == true || formulario.cinco. == true){
+        if(formulario.uno == true || formulario.dos == true || formulario.tres == true || formulario.cuatro == true || formulario.cinco == true){
         } else {
             alert("Califique la calidad de nuestros productos, por favor.")
             e.preventDefault();
