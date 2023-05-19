@@ -5,7 +5,7 @@ Estudiantes:
   Zoe Tavella
   Brian Gabriel Funes
   Julio Jimenez (Abandonó)
-  Georgina (No sabemos apellido - Abandonó)
+  Georgina Guadalupe Ramirez (Abandonó)
 
 Puntos a tener en cuenta del Trabajo Practico Obligatorio:
 
