@@ -406,7 +406,6 @@ section img:hover{
 }
 
 .form-container{
-    display: grid;
     grid-template-columns: (1, 1fr);
     grid-auto-rows: 200px;
     width: 100%;
