@@ -12,7 +12,7 @@ fetch(url)
 .then(res => res.json())
 .then(data => CrearHtml(data.data))
 function CrearHtml(data){
-	for (const img of data) {
+	for (const img of data){
 		gallery.innerHTML +=`
 		<div class="image overflow">
 		<img loading=lazy" src"${img.media_url}" alt"">
@@ -32,7 +32,7 @@ next.addEventListener('click', moveGallery);
 prev.addEventListener('click', moveGallery);
 
 function moveGallery(e){
-if (e.target.id == 'next' || e.target.parentElement.id == 'next') {
+if (e.target.id == 'next' || e.target.parentElement.id == 'next'){
 	feed.scrollLeft += feed.offsetWidth;
 } else {
 	feed.scrollLeft -= feed.offsetWidth;
