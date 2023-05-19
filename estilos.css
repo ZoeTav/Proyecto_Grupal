@@ -508,3 +508,19 @@ section img:hover{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+.text .text-info{
+  color: #145374;
+  font-family:'IBM Plex Mono', monospace ;
+    text-align: center;
+}
+#quote{
+  font-size: 2em;
+  text-align: center
+}
+.card-body{
+  margin: 30px
+}
+.card-body>span{ 
+  text-align: right;
+  font-size: 1.5em
+}
