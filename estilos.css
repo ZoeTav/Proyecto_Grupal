@@ -513,7 +513,6 @@ section img:hover{
 .container{
     display: grid;
     grid-template-columns: repeat (1 1fr);
-    margin: 0 50px;
     width: 100%;
     position: relative;
 }
