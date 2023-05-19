@@ -1,3 +1,4 @@
+const HTMLResponse = document.query.selector("#app");
 $(document).ready(function() {
    getMyRandomQuote();
    $("#quoteButton").on("click", getMyRandomQuote);
