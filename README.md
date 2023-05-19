@@ -41,7 +41,8 @@ Puntos a tener en cuenta del Trabajo Practico Obligatorio:
                                                                        *En el apartado está dividio por /*Estilos Menú*/ y /*Estilos Section*/.
                                                                       
    7 - Posee una estructura HTML maqueteada con GRID y FLEX. Aunque más GRID que FLEX.
-   8 - Consumir una API Rest desde Javascript : 
+   8 - Consumir una API Rest desde Javascript :
+        La API de visualización básica de Instagram es una API basada en HTTP que las aplicaciones pueden utilizar para obtener el perfil, las imágenes, los           vídeos y los álbumes de un usuario de Instagram.
    9 - Web subida a : https://ceramicart.netlify.app/home.html
   
   Tanto Zoe como Brian, hemos trabajado en contacto durante las últimas semanas: Zoe haciendo hincapié en los códigos de CSS y Brian tanto en JavaScript como HTML, siendo el último entre ambos. Aún así, el diseño fué inspirado y proporcionado por Zoe logrando así un estilo sencillo pero delicado a la hora de ver una web de arte & artesanías. Esto dando como resultado en donde ambos se han esforzado para que se lograse la aprobación pero así también la superación en este camino de aprendizaje.
