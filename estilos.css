@@ -246,11 +246,6 @@ section img:hover{
     }
 }
 
-/*Estilos Form*/
-.form-container{
-    display: grid;
-}
-
 /*Estilos About*/
 .gallery-container-about{
     display: grid;
