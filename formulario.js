@@ -18,21 +18,19 @@
         }
     }
 
-    const validarCalidad = function(e){
-        /*if(formulario.uno == true || formulario.dos == true || formulario.tres == true || formulario.cuatro == true || formulario.cinco == true)*/{
-    const validarCalidad = document.querySelector("input[name='califacicion']:checked");
+    const validarCalidad = document.querySelector("input[name='calificacion']:checked");
 
       if (validarCalidad) {
-        const validarCalidadX = puntuacion.value;
+        const validarCalidadX = calificacion.value;
         alert("Gracias por tu puntuación: " + validarCalidadX);
-        form.reset();
+        form.reset();}
     
     const validar = function(e){
         validarNombre(e);
         validarRadio(e);
-        validarCalidad(e);
+        validarCalidad();
     }
 
     formulario.addEventListener("submit",validar);
 
-})
+});
