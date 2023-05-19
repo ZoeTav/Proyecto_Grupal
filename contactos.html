@@ -78,48 +78,47 @@
     </footer>
 
     <script>
-        (function(){
-    // variables
-        const contactosfor = document.getElementsByName("contactosfor")[0];
-        const elementos = contactosfor.elements;
-        const boton = document.getElementById("btn_enviar");
+        (function() {
+  // Variables
+  const contactosfor = document.getElementsByName("contactosfor")[0];
+  const boton = document.getElementById("btn_enviar");
 
-        const validarNombre = function(e) {
-            if (contactosfor.nombre.value == 0) {
-            alert("Completa el campo nombre.");
-            e.preventDefault();
-        }
-       };
+  const validarNombre = function(e) {
+    if (contactosfor.nombre.value == "") {
+      alert("Completa el campo nombre.");
+      e.preventDefault();
+    }
+  };
 
-        const validarCorreo = function(e) {
-            if (contactosfor.correo.value == 0) {
-            alert("Completa el campo Correo.");
-            e.preventDefault();
-        }
-       };
+  const validarCorreo = function(e) {
+    if (contactosfor.correo.value == "") {
+      alert("Completa el campo Correo.");
+      e.preventDefault();
+    }
+  };
 
-        const validarTelefono = function(e) {
-            if (contactosfor.numeroTel.value == 0) {
-            alert("Completa el campo de número de teléfono.");
-            e.preventDefault();
-        }
-       };
+  const validarTelefono = function(e) {
+    if (contactosfor.numeroTel.value == "") {
+      alert("Completa el campo de número de teléfono.");
+      e.preventDefault();
+    }
+  };
 
-        const validarTextarea = function(e) {
-            if (contactosfor.comentario.value == 0) {
-            alert("Agregue un comentario, será de nuestro agrado leerle.");
-            e.preventDefault();
-        }
-       };
+  const validarTextarea = function(e) {
+    if (contactosfor.comentario.value == "") {
+      alert("Agrega un comentario, será de nuestro agrado leerle.");
+      e.preventDefault();
+    }
+  };
 
-        const validar = function(e) {
-            validarNombre(e);
-            validarCorreo(e);
-            validarTelefono(e);
-            validarTextarea(e);
-       };
+  const validar = function(e) {
+    validarNombre(e);
+    validarCorreo(e);
+    validarTelefono(e);
+    validarTextarea(e);
+  };
 
-        contactosfor.addEventListener("submit", validar);
+  contactosfor.addEventListener("submit", validar);
        })();
     </script>
 </body>
