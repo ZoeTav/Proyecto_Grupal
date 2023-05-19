@@ -508,6 +508,7 @@ section img:hover{
         grid-template-columns: repeat(1, 1fr);
     }
 }
+/*Estilos API*/
 .text .text-info{
   color: #145374;
   font-family:'IBM Plex Mono', monospace ;
