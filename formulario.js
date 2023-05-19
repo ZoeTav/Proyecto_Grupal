@@ -28,7 +28,7 @@
     const validar = function(e){
         validarNombre(e);
         validarRadio(e);
-        validarCalidad();
+        validarCalidad(e);
     }
 
     formulario.addEventListener("submit",validar);
