@@ -74,23 +74,22 @@
     <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43809.2239100489!2d-1.4219864920920835!3d46.66475087127123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48043014abfc9dc1%3A0x30d37521e092ad0!2sVend%C3%A9e%2C%20Francia!5e0!3m2!1ses-419!2sar!4v1684459288156!5m2!1ses-419!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <div class="form-container">
     <form action="" name="formulario" method="get">
-    <input class="form__item" type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: ">
-    <input class="form__item" type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido: ">
+    <input class="form__item" type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre: " "required">
+    <input class="form__item" type="text" name="apellido" id="apellido" maxlength="30" placeholder="Apellido:" "required">
     <br>
 
-    <input class="form__item" type="radio" name="sexo" id="hombre" value="hombre" required> Hombre
-    <input class="form__item" type="radio" name="sexo" id="mujer" value="mujer" required> Mujer
-    <input class="form__item" type="radio" name="sexo" id="otro" value="otro" required> Otro
+    <input class="form__item" type="radio" name="sexo" id="hombre" value="hombre" > Hombre
+    <input class="form__item" type="radio" name="sexo" id="mujer" value="mujer" > Mujer
+    <input class="form__item" type="radio" name="sexo" id="otro" value="otro" > Otro
     <br>
 
-    <input class="form__item" type="radio" name="uno" id="uno" value="uno" required>1
-    <input class="form__item" type="radio" name="dos" id="dos" value="dos" required>2
-    <input class="form__item" type="radio" name="tres" id="tres" value="tres" required>3
-    <input class="form__item" type="radio" name="cuatro" id="cuatro" value="cuatro" required>4
-    <input class="form__item" type="radio" name="cinco" id="cinco" value="cinco" required>5
+    <input class="form__item" type="radio" name="uno" id="uno" value="uno">1
+    <input class="form__item" type="radio" name="dos" id="dos" value="dos" >2
+    <input class="form__item" type="radio" name="tres" id="tres" value="tres" >3
+    <input class="form__item" type="radio" name="cuatro" id="cuatro" value="cuatro" >4
+    <input class="form__item" type="radio" name="cinco" id="cinco" value="cinco" >5
     <br>
     <input class="form-button" type="submit" id="btn" name="btn" value="ENVIAR">
-    <input class="form-button" type="reset" id="btn" name="btn" value="BORRAR">
 </form>
 </div>
 
