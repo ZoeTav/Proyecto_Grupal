@@ -9,6 +9,13 @@
             e.preventDefault();
         }
     }
+    
+     const validarApellido = function(e){
+        if(formulario.apellido.value == 0){
+            alert("Complete el campo apellido."),
+            e.preventDefault();
+        }
+    }
 
     const validarRadio = function(e){
         if(formulario.sexo[0].checked == true || formulario.sexo[1].checked == true){
@@ -27,6 +34,7 @@
     
     const validar = function(e){
         validarNombre(e);
+        validarApellido(e);
         validarRadio(e);
         validarCalidad(e);
     }
