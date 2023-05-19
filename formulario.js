@@ -19,13 +19,13 @@
     }
 
     const validarCalidad = function(e){
-        if(formulario.uno == true || formulario.dos == true || formulario.tres == true || formulario.cuatro == true || formulario.cinco == true){
-        } else {
-            alert("Califique la calidad de nuestros productos, por favor.")
-            e.preventDefault();
-        }
+        /*if(formulario.uno == true || formulario.dos == true || formulario.tres == true || formulario.cuatro == true || formulario.cinco == true)*/{
+    const validarCalidad = document.querySelector("input[name='califacicion']:checked");
 
-    }
+      if (validarCalidad) {
+        const validarCalidadX = puntuacion.value;
+        alert("Gracias por tu puntuación: " + validarCalidadX);
+        form.reset();
     
     const validar = function(e){
         validarNombre(e);
