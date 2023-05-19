@@ -538,7 +538,7 @@ section img:hover{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #5588A3;
     font-size: 1.5em;
-    text-align: center;
+    margin: 0 0 0 15px;
 }
   .button-quote{
     border: none;
