@@ -5,7 +5,7 @@ const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 
 const token = 'IGQVJVNjFXazNFOUdTY1loclVTLXJPUjFkX0NRYzZAKTW5pdWpVeXhVeEF4RVg0dkZAyU2tob2RLd2lpV09uYzdob2tldWo5U0lTMEs1ZA2lHZAzR0VzZA1QWdwUWY1ZAzd3UWc0Y016c1FrWGNxd2dGVWxtOAZDZD';
-const url= `https://graph.instagram.com/v11.0/10218560180051171/media?fields=business_discovery.username({ceramic.art_proyecto}){media_url,caption,permalink&limit=80}&access_token=${token}`;
+const url= `https://graph.instagram.com/v11.0/1680800859021847/media?fields=business_discovery.username({ceramic.art_proyecto}){media_url,caption,permalink&limit=80}&access_token=${token}`;
 
 
 fetch(url)
